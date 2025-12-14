@@ -299,3 +299,78 @@ body {
   color: #6b7280;
   background: #020617;
 }
+
+/* ==== CONTRAST TWEAKS (override previous styles) ==== */
+
+/* Dark background but a bit lighter cards and brighter text */
+body {
+  background: #020617;          /* slightly darker page background */
+  color: #f9fafb;               /* almost white text */
+}
+
+/* Sidebar + cards stand out more from background */
+.sidebar {
+  background: #020617;
+  border-color: #1f2937;
+}
+
+.card {
+  background: #111827;          /* lighter than page, so it pops */
+  border-color: #334155;
+}
+
+/* Headings a bit brighter and larger */
+.card h2 {
+  color: #f9fafb;
+  font-size: 1.2rem;
+}
+
+.card h3 {
+  color: #e5e7eb;
+  font-size: 1rem;
+}
+
+/* Body text slightly larger for readability */
+.card p,
+.bullets li,
+.roadmap li {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+}
+
+/* Pills with stronger contrast */
+.pill {
+  background: #1d4ed8;          /* blue */
+  color: #e5e7eb;
+}
+
+/* Links more visible */
+a {
+  color: #38bdf8;
+}
+
+a:hover {
+  color: #7dd3fc;
+}
+
+/* Badges and “Link TBD” chips clearer */
+.badge-muted {
+  background: #020617;
+  border-color: #4b5563;
+  color: #e5e7eb;
+}
+
+/* Sidebar links slightly brighter on hover */
+.sidebar a {
+  color: #e5e7eb;
+}
+
+.sidebar a:hover {
+  background: #0b1120;
+  color: #38bdf8;
+}
+
+/* Footer text a bit brighter */
+.footer {
+  color: #9ca3af;
+}

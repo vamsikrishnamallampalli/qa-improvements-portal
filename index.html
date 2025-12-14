@@ -24,10 +24,14 @@
       <h2>Sections</h2>
       <ul>
         <li><a href="#overview">Overview</a></li>
-        <li><a href="#wins">Key Improvements</a></li>
-        <li><a href="#automation">Automation Progress</a></li>
-        <li><a href="#process">Process &amp; Governance</a></li>
-        <li><a href="#metrics">Metrics &amp; Dashboards</a></li>
+        <li><a href="#domain">Applications in Scope</a></li>
+        <li><a href="#assets">Core QA Assets</a></li>
+        <li><a href="#automation-web-mobile">Web &amp; Mobile Automation</a></li>
+        <li><a href="#automation-api">API Automation</a></li>
+        <li><a href="#loadtest">Load &amp; Performance</a></li>
+        <li><a href="#metrics">Test Status &amp; Dashboards</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#how-to-use">How POs &amp; Business Use This</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
       </ul>
     </nav>
@@ -38,135 +42,427 @@
       <section id="overview" class="card">
         <h2>Overview</h2>
         <p>
-          This portal provides a single view of all QA improvements across Digital — covering
-          processes, automation, tools, and governance. It is intended for Product Owners,
-          Engineering, and Leadership to track progress and upcoming initiatives.
+          This portal provides a single view of QA practices and improvements across Digital —
+          processes, automation, tools, test assets, and reporting. It is intended for Product
+          Owners, Business stakeholders, Engineering, and QA to have a common, always-on
+          reference.
         </p>
         <div class="pill-row">
+          <span class="pill">Domain alignment</span>
           <span class="pill">Shift-left testing</span>
-          <span class="pill">Test automation</span>
-          <span class="pill">Quality dashboards</span>
-          <span class="pill">Continuous improvement</span>
+          <span class="pill">Automation at scale</span>
+          <span class="pill">Transparent reporting</span>
         </div>
+        <p class="last-updated">
+          Last updated: <!-- update this manually --> 14 Dec 2025
+        </p>
       </section>
 
-      <!-- Key Improvements -->
-      <section id="wins" class="card">
-        <h2>Key Process Improvements (Snapshot)</h2>
-        <div class="grid-3">
-          <div class="mini-card">
-            <h3>Defect Management</h3>
-            <p>
-              Standardised defect workflow across vendor and internal teams, with common
-              priority/severity and SLA tracking.
-            </p>
-          </div>
-          <div class="mini-card">
-            <h3>UAT Readiness</h3>
-            <p>
-              Clear entry/exit criteria, checklists, and sign-offs for UAT to reduce last-minute
-              surprises.
-            </p>
-          </div>
-          <div class="mini-card">
-            <h3>Release Governance</h3>
-            <p>
-              Structured go/no-go checklists with risk visibility, open defects, and test coverage
-              summary per release.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Automation Progress -->
-      <section id="automation" class="card">
-        <h2>Automation Progress</h2>
+      <!-- Domain / Applications in scope -->
+      <section id="domain" class="card">
+        <h2>Applications &amp; Domains in Scope</h2>
         <p>
-          High-level view of automation coverage across key products. Replace the placeholder
-          numbers with actual figures once available.
+          These are the key customer-facing and internal products covered by QA under this
+          portal.
         </p>
         <div class="grid-3">
-          <div class="mini-card kpi">
-            <h3>Web – Booking</h3>
-            <p class="kpi-number">40%</p>
-            <p class="kpi-note">Sanity + partial regression</p>
+          <div class="mini-card">
+            <h3>IBE – Online Booking (xyz.com)</h3>
+            <p>
+              Internet Booking Engine for flight search and booking.
+              <br />
+              <a href="https://mabitdept.sharepoint.com/:x:/r/sites/DigitalSolutions/Digital%20Solutions/Projects/01%20Generic%20Documents/General/PSST/Office%20Ids/MH%20ECO%20OIDs.xlsx?d=w25c335b3b16542368bfe41a71856ee2e&csf=1&web=1&e=DaD5Sz" target="_blank" class="link-inline">
+                Open IBE site
+              </a>
+              <!-- TODO: replace with actual IBE URL -->
+            </p>
           </div>
-          <div class="mini-card kpi">
+          <div class="mini-card">
+            <h3>Website</h3>
+            <p>
+              Corporate / marketing website.
+              <br />
+              <span class="badge badge-muted">Link TBD</span>
+            </p>
+          </div>
+          <div class="mini-card">
+            <h3>AMAL</h3>
+            <p>
+              Domain-specific application (AMAL). Functional / integration testing covered by QA.
+              <br />
+              <span class="badge badge-muted">Details to be added</span>
+            </p>
+          </div>
+          <div class="mini-card">
             <h3>Mobile App</h3>
-            <p class="kpi-number">25%</p>
-            <p class="kpi-note">Critical path sanity</p>
+            <p>
+              iOS and Android mobile applications for booking, check-in, and post-booking flows.
+            </p>
           </div>
-          <div class="mini-card kpi">
-            <h3>APIs</h3>
-            <p class="kpi-number">35%</p>
-            <p class="kpi-note">Core services covered</p>
+          <div class="mini-card">
+            <h3>DP</h3>
+            <p>
+              DP platform (define as needed) – integrations and business logic validation.
+              <br />
+              <span class="badge badge-muted">Details to be added</span>
+            </p>
+          </div>
+          <div class="mini-card">
+            <h3>LYRA</h3>
+            <p>
+              LYRA system (define as needed) included in integration and regression scope.
+              <br />
+              <span class="badge badge-muted">Details to be added</span>
+            </p>
           </div>
         </div>
+      </section>
+
+      <!-- Core QA Assets -->
+      <section id="assets" class="card">
+        <h2>Core QA Assets</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Test Data &amp; Strategy</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Test Data Portal:</strong>
+                <a href="https://mabitdept.sharepoint.com/:x:/r/sites/DigitalSolutions/Digital%20Solutions/Projects/01%20Generic%20Documents/TEST%20DATA/Test%20cards_V3.0.xlsx?d=w0d8cbd91a51248289907dc6f86d15054&csf=1&web=1&e=StDCav" target="_blank">Access test data</a>
+                <!-- TODO: replace with actual link -->
+              </li>
+              <li>
+                <strong>Master Test Strategy:</strong>
+                <a href="https://mabitdept.sharepoint.com/sites/MAGDigitalPlatforms58/SitePages/Agile-Test-Strategy-and-Governance.aspx?xsdata=MDV8MDJ8fDA1NDlhN2E3NWYxNDRiNzc2ZTRmMDhkZDdkNjFlODcyfDhmYzNhNTY3MWVlODQ5OTQ4MDljNDlmNTBjZGI2ZDQ4fDB8MHw2Mzg4MDQ1ODE2MjE1OTE2MzF8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMMk5vWVhSekx6RTVPamN4TXpBMFpUUTRZV1UxWmpSbE5qWmhOMkZoT1dZelpEQTJZell3T1dGbVFIUm9jbVZoWkM1Mk1pOXRaWE56WVdkbGN5OHhOelEwT0RZeE16WXdPREExfGM2NDhjYzE0ODA3YTQ5MTAwYmVmMDhkZDdkNjFlODcwfDg3OTA1NGU1NDI3OTQyNWY5YTA1NDgzMTc5ZjI0Mzc0&sdata=c1pVR00wQW4rRFVDQ0tLeHFrVFlZYlFwcis4TkhjTDNySkpiaEtLWUZ0dz0%3d&ovuser=8fc3a567-1ee8-4994-809c-49f50cdb6d48%2cvamsikrishna.mallampalli%40malaysiaairlines.com&OR=Teams-HL&CT=1750230204501&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNTA1MTgwMDIxOSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3d%3d&SafelinksUrl=https%3a%2f%2fmabitdept.sharepoint.com%2fsites%2fMAGDigitalPlatforms58%2fSitePages%2fAgile-Test-Strategy-and-Governance.aspx" target="_blank">View test strategy</a>
+                <!-- TODO: replace with actual link -->
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Test Artifacts &amp; Definition of Ready/Done</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Test Artifacts Repository:</strong>
+                <a href="https://mabitdept.sharepoint.com/sites/MAG-DigitalPlatforms/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FMAG%2DDigitalPlatforms%2FShared%20Documents%2FDigital%5FQA&p=true&ga=1" target="_blank">
+                  Browse test cases &amp; reports
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+              <li>
+                <strong>Definition of Ready &amp; Definition of Done:</strong>
+                <a href="https://mabitdept.sharepoint.com/:w:/r/sites/MAG-DigitalPlatforms/_layouts/15/Doc.aspx?sourcedoc=%7BD2B7F111-A96F-4AFA-A46A-9EFF7F7F7510%7D&file=DoR_DoD_docx.docx&action=default&mobileredirect=true" target="_blank">View criteria</a>
+                <!-- TODO: replace with actual link -->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web & Mobile Automation -->
+      <section id="automation-web-mobile" class="card">
+        <h2>Test Automation – Web &amp; Mobile</h2>
+        <p>
+          Web and mobile automation focuses on core customer journeys in IBE, Website, and Mobile
+          App. The current implementation uses a low-code tool (SQA) to enable faster script
+          creation and execution by QA and power users.
+        </p>
+        <div class="grid-2">
+          <div>
+            <h3>Tool &amp; Access</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Tool:</strong> SQA (low-code automation tool).
+              </li>
+              <li>
+                <strong>How to register &amp; get access:</strong>
+                <a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgAx3HBLBGsYSJwleyAZ4AawAQC0r4f0eLCIQAmybTirVVk?e=uWiZWM" target="_blank">
+                  Registration &amp; access guide
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+              <li>
+                <strong>How to execute suites:</strong>
+                <a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgAx3HBLBGsYSJwleyAZ4AawAQC0r4f0eLCIQAmybTirVVk?e=uWiZWM" target="_blank">
+                  Execution user guide
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Coverage &amp; Usage</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Coverage Information:</strong>
+                <a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgAx3HBLBGsYSJwleyAZ4AawAQC0r4f0eLCIQAmybTirVVk?e=v5HsOc" target="_blank">
+                  View automated scenarios
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+              <li>Focus on high-volume booking and manage-booking journeys.</li>
+              <li>Sanity pack targeted to run for every major deployment.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- API Automation -->
+      <section id="automation-api" class="card">
+        <h2>Test Automation – APIs</h2>
+        <p>
+          API automation validates key services (e.g., Amadeus / core services) using a
+          Python-based library executed from PyCharm or CI pipelines.
+        </p>
+        <div class="grid-2">
+          <div>
+            <h3>Tool &amp; Access</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Tool:</strong> Python automation framework (PyCharm-based).
+              </li>
+              <li>
+                <strong>How to access:</strong>
+                <a href="https://github.com/MalaysiaAirlines/api-testautomation-pycharm" target="_blank">
+                  API automation repo / documentation
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+              <li>
+                <strong>Execution:</strong> Local execution via PyCharm or through CI jobs
+                (details in framework documentation).
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Coverage</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Coverage view:</strong>
+                <a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgAP2qwMAlMoR76zUjYKBbMWAWFHO4J8UQErUKyZHoIaeuA?e=yxWUWx" target="_blank">
+                  View covered services &amp; endpoints
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+              <li>Critical booking and PNR flows in focus.</li>
+              <li>Smoke suite designed to detect major regressions early.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Load & Performance -->
+      <section id="loadtest" class="card">
+        <h2>Load &amp; Performance Testing</h2>
+        <p>
+          Performance and load testing ensures stability under peak loads and protects critical
+          journeys from degradation during large campaigns or peak seasons.
+        </p>
+        <div class="grid-2">
+          <div>
+            <h3>Tool &amp; Access</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Tool details:</strong>
+                <!-- Add tool name here, e.g. JMeter / LoadRunner / k6 -->
+                <span class="badge badge-muted">Tool name to be added</span>
+              </li>
+              <li>
+                <strong>How to access:</strong>
+                <a href="TBD" target="_blank">
+                  Load test environment &amp; access guide
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Strategy &amp; Reports</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Load test strategy:</strong>
+                <a href="TBD" target="_blank">
+                  View strategy document
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+              <li>
+                <strong>Execution &amp; reports:</strong>
+                <a href="TBD" target="_blank">
+                  Browse latest performance reports
+                </a>
+                <!-- TODO: replace with actual link -->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Test Status & Dashboards -->
+      <section id="metrics" class="card">
+        <h2>Test Status &amp; Dashboards</h2>
+        <p>
+          This section is the live view of testing progress and quality. It combines Azure DevOps
+          dashboards, SharePoint reports, and automation run summaries.
+        </p>
+
+        <div class="grid-2">
+          <div>
+            <h3>Release / Sprint Status</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Azure DevOps dashboard:</strong>
+                <a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgDX4DNYILmeTo2ipjP_2nzHAfuoKSDTktoxwHG0zrmfyHc?e=0dQJc1" target="_blank">
+                  View current sprint/release status
+                </a>
+                <!-- TODO: replace with actual ADO dashboard link -->
+              </li>
+              <li>
+                Recommended: standard widget set –
+                <em>Test cases planned vs executed, defects by severity, burndown/burnup</em>.
+              </li>
+              <li>
+                <strong>SharePoint / Excel reports:</strong>
+                <a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgDX4DNYILmeTo2ipjP_2nzHAfuoKSDTktoxwHG0zrmfyHc?e=0dQJc1" target="_blank">
+                  Browse archived status reports
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Automation &amp; Quality Trends</h3>
+            <ul class="bullets">
+              <li>
+                <strong>Automation run summary:</strong>
+                <a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgDEF7hUZZPpSb-dQnjBCmj4AV19UbpEl17Hf0OlHHx-du4?e=OKAqhh" target="_blank">
+                  View latest automation runs
+                </a>
+              </li>
+              <li>Track pass/fail trends across key flows and environments.</li>
+              <li>
+                Optionally embed a Power BI report here (publish to web or internal link) for a
+                visual view of quality trends.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Example iframe placeholder if you later have a Power BI / ADO dashboard -->
+        <div class="status-iframe-wrapper">
+          <p class="status-iframe-caption">
+            Placeholder for embedded dashboard – replace the URL when ready.
+          </p>
+          <iframe
+            src="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgDEF7hUZZPpSb-dQnjBCmj4AV19UbpEl17Hf0OlHHx-du4?e=OKAqhh"
+            title="QA Status Reports"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- General Resources -->
+      <section id="resources" class="card">
+        <h2>Resources</h2>
         <ul class="bullets">
-          <li>Technology: Playwright / Python, integrated with CI (planned/ongoing).</li>
-          <li>Scope: Sanity for all releases; targeted regression for high-risk flows.</li>
-          <li>Objective: Reduce UAT cycle time and improve confidence in frequent releases.</li>
+          <li>
+            <a href="TBD" target="_blank">
+              QA Playbook &amp; Standards
+            </a>
+          </li>
+          <li>
+            <a href="TBD" target="_blank">
+              Environments &amp; Release Calendar
+            </a>
+          </li>
+          <li>
+            <a href="TBD" target="_blank">
+              Training &amp; onboarding materials
+            </a>
+          </li>
         </ul>
       </section>
 
-      <!-- Process & Governance -->
-      <section id="process" class="card">
-        <h2>Process &amp; Governance</h2>
+      <!-- How POs & Business Should Use This -->
+      <section id="how-to-use" class="card">
+        <h2>How Product Owners &amp; Business Can Use This Portal</h2>
         <div class="grid-2">
           <div>
-            <h3>Standard QA Process</h3>
+            <h3>For Product Owners / Business</h3>
             <ul class="bullets">
-              <li>Story refinement with QA involvement (shift-left).</li>
-              <li>Clear acceptance criteria and test conditions in Azure DevOps.</li>
-              <li>Risk-based testing for each release.</li>
-              <li>Defect triage cadence with vendors &amp; internal teams.</li>
+              <li>Use <strong>Applications in Scope</strong> to understand where QA is engaged.</li>
+              <li>
+                Use <strong>Core QA Assets</strong> to quickly open Test Strategy, DoR/DoD, and
+                test data guidelines when refining stories.
+              </li>
+              <li>
+                Check <strong>Test Status &amp; Dashboards</strong> for current sprint / release
+                quality at a glance before go/no-go decisions.
+              </li>
+              <li>
+                Review <strong>Web/Mobile &amp; API Automation</strong> to see what is already
+                automated and where manual testing is still required.
+              </li>
             </ul>
           </div>
           <div>
-            <h3>Tools &amp; Integrations</h3>
+            <h3>For QA &amp; Test Managers</h3>
             <ul class="bullets">
-              <li>Azure DevOps for backlog, test cases, and defects.</li>
-              <li>Planned integration with dashboards (Power BI / Azure Boards).</li>
-              <li>Logging &amp; monitoring via Azure Insights / Datadog (planned/ongoing).</li>
+              <li>Keep links updated for each tool, dashboard, and repository.</li>
+              <li>
+                Update automation coverage and key metrics regularly so this portal remains the
+                single source of truth.
+              </li>
+              <li>
+                Use the portal as a starting point in discussions with new stakeholders, vendors,
+                and teams.
+              </li>
+              <li>
+                Capture new initiatives in the <strong>Roadmap</strong> and link to supporting
+                documents.
+              </li>
             </ul>
           </div>
         </div>
-      </section>
 
-      <!-- Metrics & Dashboards -->
-      <section id="metrics" class="card">
-        <h2>Metrics &amp; Dashboards</h2>
-        <p>
-          This section highlights key quality indicators. You can embed screenshots or links to
-          live dashboards from Azure DevOps/Power BI here.
-        </p>
-        <div class="grid-3">
-          <div class="mini-card kpi">
-            <h3>Defect Leakage</h3>
-            <p class="kpi-number">↓ 20%</p>
-            <p class="kpi-note">vs last quarter</p>
-          </div>
-          <div class="mini-card kpi">
-            <h3>Automation Run Time</h3>
-            <p class="kpi-number">~30 mins</p>
-            <p class="kpi-note">E2E sanity pack</p>
-          </div>
-          <div class="mini-card kpi">
-            <h3>UAT Cycle Time</h3>
-            <p class="kpi-number">-15%</p>
-            <p class="kpi-note">average reduction</p>
-          </div>
+        <div class="button-row">
+          <a
+            href="mailto:vamsikrishna.mallampalli@malaysiaairlines.com"
+            class="btn-link"
+          >
+            Email QA Team
+          </a>
+          <a
+            href="vamsikrishna.mallampalli@malaysiaairlines.com"
+            target="_blank"
+            class="btn-link btn-outline"
+          >
+            Raise QA Support / Engagement
+          </a>
+          <a
+            href="vamsikrishna.mallampalli@malaysiaairlines.com"
+            target="_blank"
+            class="btn-link btn-outline"
+          >
+            View current release board
+          </a>
         </div>
       </section>
 
       <!-- Roadmap -->
       <section id="roadmap" class="card">
-        <h2>Roadmap</h2>
+        <h2>Roadmap (QA Transformation)</h2>
         <ol class="roadmap">
-          <li><strong>Q1:</strong> Stabilise automation for 2 key projects; finalise QA playbook.</li>
-          <li><strong>Q2:</strong> Expand automation to remaining projects; introduce quality dashboards.</li>
-          <li><strong>Q3:</strong> Integrate logs/monitoring; implement continuous testing in CI/CD.</li>
-          <li><strong>Q4:</strong> Optimise coverage, focus on NFR testing, and predictive quality insights.</li>
+          <li><strong>Q1:</strong> Stabilise automation for key products; finalise QA playbook.</li>
+          <li>
+            <strong>Q2:</strong> Expand automation &amp; status dashboards across all Digital
+            products.
+          </li>
+          <li>
+            <strong>Q3:</strong> Integrate logs/monitoring and performance testing into regular
+            releases.
+          </li>
+          <li>
+            <strong>Q4:</strong> Optimise coverage, focus on NFR testing, and introduce predictive
+            quality insights.
+          </li>
         </ol>
       </section>
     </section>

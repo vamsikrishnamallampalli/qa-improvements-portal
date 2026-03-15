@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
+  <header class="topbar" id="top">
     <div class="logo-area">
       <div class="logo-circle">QA</div>
       <div class="logo-text">
@@ -21,24 +21,69 @@
   <main class="layout">
     <!-- LEFT: Navigation -->
     <nav class="sidebar">
-      <h2>Sections</h2>
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#domain">Applications in Scope</a></li>
-        <li><a href="#assets">Core QA Assets</a></li>
-        <li><a href="#automation-web-mobile">Web &amp; Mobile Automation</a></li>
-        <li><a href="#automation-api">API Automation</a></li>
-        <li><a href="#loadtest">Load &amp; Performance</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#how-to-use">How POs &amp; Business Use This</a></li>
-        <li><a href="#roadmap">Roadmap</a></li>
-        <li><a href="#monthly-report">Monthly Status Report</a></li>
-        <li><a href="#poc">Innovation &amp; POC</a></li>
-      </ul>
+      <div class="sidebar-brand">Navigation</div>
+
+      <!-- MANAGEMENT group -->
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">Management</div>
+        <ul>
+          <li class="sidebar-mgmt-pin">
+            <a href="#monthly-report">
+              <span class="sidebar-icon">📊</span>
+              Monthly Status Report
+              <span class="sidebar-mgmt-badge">Latest</span>
+            </a>
+          </li>
+          <li><a href="#overview"><span class="sidebar-icon">🏠</span> Overview</a></li>
+        </ul>
+      </div>
+
+      <!-- AUTOMATION group -->
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">Automation</div>
+        <ul>
+          <li><a href="#automation-web-mobile"><span class="sidebar-icon">🌐</span> Web &amp; Mobile</a></li>
+          <li><a href="#automation-api"><span class="sidebar-icon">🔌</span> API Automation</a></li>
+          <li><a href="#loadtest"><span class="sidebar-icon">📈</span> Load &amp; Performance</a></li>
+        </ul>
+      </div>
+
+      <!-- GOVERNANCE group -->
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">Governance</div>
+        <ul>
+          <li><a href="#assets"><span class="sidebar-icon">📁</span> Core QA Assets</a></li>
+          <li><a href="#domain"><span class="sidebar-icon">🗂️</span> Applications in Scope</a></li>
+          <li><a href="#resources"><span class="sidebar-icon">📚</span> Resources</a></li>
+          <li><a href="#roadmap"><span class="sidebar-icon">🗺️</span> Roadmap</a></li>
+        </ul>
+      </div>
+
+      <!-- OTHER group -->
+      <div class="sidebar-group">
+        <div class="sidebar-group-label">Other</div>
+        <ul>
+          <li><a href="#how-to-use"><span class="sidebar-icon">💡</span> How POs Use This</a></li>
+          <li><a href="#poc"><span class="sidebar-icon">⚡</span> Innovation &amp; POC</a></li>
+        </ul>
+      </div>
+
+      <a href="#top" class="sidebar-back-top">↑ Back to top</a>
     </nav>
 
     <!-- RIGHT: Content -->
     <section class="content">
+
+      <!-- Management Quick Access Banner -->
+      <div class="mgmt-banner">
+        <div class="mgmt-banner-icon">📊</div>
+        <div class="mgmt-banner-body">
+          <div class="mgmt-banner-title">Consolidated Monthly Status Report</div>
+          <div class="mgmt-banner-sub">QA health across all products — automation results, defect trends, coverage changes, and key risks. Shared with Digital leadership each month.</div>
+        </div>
+        <a href="#monthly-report" class="mgmt-banner-cta">View Report →</a>
+      </div>
+
       <!-- Overview -->
       <section id="overview" class="card">
         <h2>Overview</h2>
@@ -223,8 +268,6 @@
               <dd class="pc-value">TBD members</dd>
               <dt class="pc-label">PIC</dt>
               <dd class="pc-value">TBD</dd>
-              <dt class="pc-label">Status</dt>
-              <dd class="pc-value"><span class="badge badge-inprogress">In Progress</span></dd>
               <dt class="pc-label">Artifacts</dt>
               <dd class="pc-value"><a href="#" target="_blank">View artifacts</a></dd>
               <dt class="pc-label">Dashboard</dt>
@@ -241,8 +284,6 @@
               <dd class="pc-value">1 Senior QA</dd>
               <dt class="pc-label">PIC</dt>
               <dd class="pc-value">nikfatmawati.nikmohamed@malaysiaairlines.com</dd>
-              <dt class="pc-label">Status</dt>
-              <dd class="pc-value"><span class="badge badge-onhold">On Hold</span></dd>
               <dt class="pc-label">Artifacts</dt>
               <dd class="pc-value"><a href="https://oneworldalliance.sharepoint.com/sites/Governance/DigitalInnovBoard/oneworldDigital/Lists/MH%20%20TC%20Tracker/AllItems.aspx?e=bHHbPq&CID=3c076278%2D3543%2D4e0a%2D9145%2D75f951f2a3b8" target="_blank">View artifacts</a></dd>
               <dt class="pc-label">Dashboard</dt>
@@ -259,8 +300,6 @@
               <dd class="pc-value">2 Junior QA</dd>
               <dt class="pc-label">PIC</dt>
               <dd class="pc-value">imannuramnisyafina.mohddali@malaysiaairlines.com</dd>
-              <dt class="pc-label">Status</dt>
-              <dd class="pc-value"><span class="badge badge-active">Active</span></dd>
               <dt class="pc-label">Artifacts</dt>
               <dd class="pc-value"><a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgB4Pn6aDtRZT76Kp0XkM19EAYjNL0KKZj6muREcWzOJRYM?e=QwGWtn" target="_blank">View artifacts</a></dd>
               <dt class="pc-label">Status</dt>
@@ -277,8 +316,6 @@
               <dd class="pc-value">2 Senior and 1 Junior QA</dd>
               <dt class="pc-label">PIC</dt>
               <dd class="pc-value">ext_chatureswari.veeramreddi@malaysiaairlines.com</dd>
-              <dt class="pc-label">Status</dt>
-              <dd class="pc-value"><span class="badge badge-active">Active</span></dd>
               <dt class="pc-label">Artifacts</dt>
               <dd class="pc-value"><a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgA8nJxebeqBTZBBF5BxIJtmAWrHInuiooBcGU9tIn9-BTw?e=JPRl1S" target="_blank">View artifacts</a></dd>
               <dt class="pc-label">Dashboard</dt>
@@ -295,8 +332,6 @@
               <dd class="pc-value">2 Senior and 1 Junior QA</dd>
               <dt class="pc-label">PIC</dt>
               <dd class="pc-value">ext_chatureswari.veeramreddi@malaysiaairlines.com</dd>
-              <dt class="pc-label">Status</dt>
-              <dd class="pc-value"><span class="badge badge-active">Active</span></dd>
               <dt class="pc-label">Artifacts</dt>
               <dd class="pc-value"><a href="https://mabitdept.sharepoint.com/:f:/s/DigitalSolutions/IgA8nJxebeqBTZBBF5BxIJtmAWrHInuiooBcGU9tIn9-BTw?e=JPRl1S" target="_blank">View artifacts</a></dd>
               <dt class="pc-label">Dashboard</dt>
@@ -694,7 +729,11 @@
       </section>
       <!-- Monthly Status Report -->
       <section id="monthly-report" class="card">
-        <h2>Consolidated Monthly Status Report</h2>
+        <div class="section-mgmt-header">
+          <span class="section-mgmt-label">Management View</span>
+          <h2>Consolidated Monthly Status Report</h2>
+          <p class="section-mgmt-sub">Shared with Digital leadership each month. Updated by QA Test Management.</p>
+        </div>
         <p>
           A single monthly summary covering QA health across all products — automation results,
           defect trends, coverage changes, and key risks. Shared with Digital leadership each month.

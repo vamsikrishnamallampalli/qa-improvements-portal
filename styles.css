@@ -783,3 +783,191 @@ a:hover {
 }
 
 .badge-planning { background: #1c1f2e; border-color: #6366f1; color: #c7d2fe; }
+
+/* ==== SIDEBAR GROUPS ==== */
+.sidebar-brand {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 0.5rem 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-group {
+  margin-bottom: 1rem;
+}
+
+.sidebar-group-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.sidebar-group ul {
+  list-style: none;
+}
+
+.sidebar-group li + li {
+  margin-top: 0.2rem;
+}
+
+.sidebar-icon {
+  font-size: 0.85rem;
+  margin-right: 0.3rem;
+  opacity: 0.85;
+}
+
+.sidebar-back-top {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: #6b7280;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1f2937;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sidebar-back-top:hover {
+  background: #0b1120;
+  color: #38bdf8;
+}
+
+/* ==== MANAGEMENT PINNED ITEM (amber/gold) ==== */
+.sidebar-mgmt-pin a {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: 0.5rem;
+  color: #fde68a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.6rem;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.sidebar-mgmt-pin a:hover {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fbbf24;
+  border-color: #f59e0b;
+}
+
+.sidebar-mgmt-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  background: #f59e0b;
+  color: #0f172a;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+/* ==== MANAGEMENT QUICK ACCESS BANNER ==== */
+.mgmt-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #1a0f00 0%, #2a1800 50%, #111827 100%);
+  border: 1px solid #f59e0b;
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.mgmt-banner-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.mgmt-banner-body {
+  flex: 1;
+  min-width: 160px;
+}
+
+.mgmt-banner-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fde68a;
+  margin-bottom: 0.25rem;
+}
+
+.mgmt-banner-sub {
+  font-size: 0.83rem;
+  color: #d97706;
+  line-height: 1.4;
+}
+
+.mgmt-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  background: #f59e0b;
+  color: #0f172a;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.mgmt-banner-cta:hover {
+  background: #fbbf24;
+}
+
+/* ==== MONTHLY REPORT SECTION HEADER ==== */
+.section-mgmt-header {
+  margin-bottom: 1rem;
+}
+
+.section-mgmt-label {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.08);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.4rem;
+}
+
+.section-mgmt-header h2 {
+  color: #fde68a;
+  padding-left: 0.75rem;
+  border-left: 3px solid #f59e0b;
+}
+
+.section-mgmt-sub {
+  font-size: 0.83rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+/* ==== SECTION VISUAL HIERARCHY ==== */
+/* Left accent bar on all non-management section headings */
+.card > h2:first-child {
+  padding-left: 0.75rem;
+  border-left: 3px solid #38bdf8;
+}
+
+/* Scroll margin so sticky sidebar doesn't occlude anchor targets */
+section[id] {
+  scroll-margin-top: 1.5rem;
+}

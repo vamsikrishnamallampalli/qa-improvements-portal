@@ -929,6 +929,16 @@ a:hover {
   background: #fbbf24;
 }
 
+/* ROI banner colour override */
+.mgmt-banner-roi {
+  background: linear-gradient(135deg, #001a0f 0%, #002818 50%, #0a1f1a 100%);
+  border-color: #10b981;
+}
+.mgmt-banner-roi .mgmt-banner-title { color: #6ee7b7; }
+.mgmt-banner-roi .mgmt-banner-sub   { color: #34d399; }
+.mgmt-banner-roi .mgmt-banner-cta   { background: #10b981; color: #0f172a; }
+.mgmt-banner-roi .mgmt-banner-cta:hover { background: #34d399; }
+
 /* ==== MONTHLY REPORT SECTION HEADER ==== */
 .section-mgmt-header {
   margin-bottom: 1rem;
